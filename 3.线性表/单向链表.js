@@ -4,7 +4,7 @@ class Node { // Node类表示要加入链表的项
         this.next = null; // 指向下一个节点项的指针
     }
 }
-class LinkList {
+class LinkedList {
     constructor (element) {
         this.length = 0
         this.head = null;
@@ -23,7 +23,7 @@ class LinkList {
         // this.getHead = getHead; // 获取表头
     }
     /**
-     * 2、向链表特定位置插入元素
+     * 1、向链表尾部添加元素
      * @param {*} element
      */
     append (element) {
@@ -46,7 +46,7 @@ class LinkList {
         console.log(this.head)
     }
     /**
-     * 向链表特定位置插入元素
+     * 2、向链表特定位置插入元素
      * @param {*} position
      * @param {*} element
      * @returns
@@ -97,6 +97,20 @@ class LinkList {
         }
         this.length--;
         return current.element; // 返回被删除元素的值
+    }
+    /**
+     * 获取某一个节点
+     * @param {*} position
+     * @returns
+     */
+    getElementAt (position) {
+        // eslint-disable-next-line no-undefined
+        if (position < 0 | position > this.length) return undefined;
+        let node = this.head;
+        for (let i = 0; i < position && node != null; i++) {
+            node = node.next
+        }
+        return node;
     }
     /**
      * 4、toString方法，会把LinkedList对象转换成一个字符串
@@ -163,5 +177,9 @@ class LinkList {
         return this.head;
     }
 }
-const nodelist = new LinkList(1)
-console.log(nodelist)
+const nodelist = new LinkedList()
+nodelist.append(1)
+nodelist.append(12)
+nodelist.append(123)
+nodelist.append(1234)
+console.log(nodelist.getElementAt(2))
