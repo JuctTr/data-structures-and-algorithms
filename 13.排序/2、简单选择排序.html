@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2、简单选择排序</title>
+</head>
+<body>
+    <script>
+    //    简单选择排序
+		var arr = [9,1,5,8,3,7,4,6,2];
+    /* 
+			思路：找到当前元素后面所有元素中最小元素的索引值，再进行互换值
+						第一趟：（i = 0的数跟后面所有的数比较），9 跟 后面所有元素中最小的元素互换值，变为[1,9,5,8,3,7,4,6,2]
+						第二趟：（i = 1的数跟后面所有的数比较），9 跟 后面所有元素中最小的元素互换值，变为[1,2,5,8,3,7,4,6,9]
+						第三趟：（i = 2的数跟后面所有的数比较），5 跟 后面所有元素中最小的元素互换值，变为[1,2,3,8,5,7,4,6,9]
+						第四趟：（i = 3的数跟后面所有的数比较），8 跟 后面所有元素中最小的元素互换值，变为[1,2,3,4,5,7,8,6,9]
+     */
+    function SelectSort(arr){
+           var i,j,min,len = arr.length;
+           for(i = 0; i < len-1; i++){
+               min = i;
+               for(j = i+1; j < len; j ++){
+                   if(arr[min] > arr[j]){
+                       min = j;
+                   }
+               }
+               if(i != min){
+                    var temp = arr[i];
+                        arr[i] = arr[min];
+                        arr[min] = temp;;
+               }
+           }
+           return arr;
+       }
+    console.log(SelectSort(arr));
+    </script>
+</body>
+</html>

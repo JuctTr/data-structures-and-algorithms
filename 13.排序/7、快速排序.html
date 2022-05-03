@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>7、快速排序.html</title>
+</head>
+<body>
+  <script>
+    /* 
+      1.	选取基准；
+      2.	目的：小于基准的“数字“排在基准前面，大于基准的“数字“排在基准后面，一趟过后，利用递归的方法把小于基准的那些“数字“和大于基准的那些“数字“按同样的方法排。
+      3.	思路：从基准右边的元素找到小于等于基准的值，从基准左边的元素找到大于等于基准的值，两者进行交换。
+      4.	每趟排序之后至少有一个数在最终（正确）的位置上。
+
+     */
+    var arr = [55,26,33,80,70,90,6,30,40,20];
+    function partition (arr, low, high){
+      let pivot = arr[low]; // 我们选数组的第一位为基准 55
+      while (low < high) { // 最后一位为 high 9
+        while (low < high && arr[high] >= pivot) { // high指针所在值 >= 基准 ，high指针先前移动
+          --high;
+        }
+        // arr[low] = arr[high]; // 能执行到这里说明 high指针所在值 < 基准 ，把high指针所在值给低端low指针
+        swap(arr, low, high);
+        while (low < high && arr[low] <= pivot) { // low指针所在值 <= 基准 ，low指针先后移动
+          ++low;
+        }
+        swap(arr, low, high);
+        // arr[high] = arr[low];
+      }
+      arr[low] = pivot;
+      return low;
+    }
+    function quickSort (arr, low, high) {
+      if (low < high) {
+        let pivot = partition(arr, low, high); // 第一趟：把比基准小的放到基准左边，把比基准大的放到基准右边
+        quickSort(arr, low, pivot - 1); // 基准 左边 递归
+        quickSort(arr, pivot + 1, high); // 基准的右边 递归
+      }
+      return arr;
+    }
+    function swap(arr, i, j){
+      var temp = arr[i];
+      arr[i] = arr[j];
+      arr[j] = temp;
+    }
+    console.log(quickSort(arr, 0, arr.length - 1))
+
+/*     function quickSort2(arr, left, right){
+      var len = arr.length,
+          partitionIndex,
+          left = typeof left != 'number'? 0 : left;
+          right = typeof right != 'number'? len - 1 : right;
+      if (left < right ){
+
+      }
+      return arr;
+    }
+    function partition2(arr, left, right){
+      var pivot = left;
+          index = pivot + 1;
+      for(var i = index; i <= right; i++){
+        if(arr[i] < arr[pivot]){
+          swap(arr, i, index);
+          index ++;
+        }
+      }
+    }
+    function swap(arr, i, j){
+      var temp = arr[i];
+      arr[i] = arr[j];
+      arr[j] = temp;
+    } */
+
+/*     var arr = [55,26,33,80,70,90,6,30,40,20];
+    
+    function quickSort(arr){
+      if(arr.length == 0) return [];
+      var left = [];
+      var right = [];
+      var pivot = arr[0];
+      for(var i = 0; i < arr.length; i ++){
+        if(arr[i] < pivot){
+          left.push(arr[i]);
+        }else{ 
+          right.push(arr[i]);
+        }
+      }
+      return quickSort(left).concat(pivot, quickSort(right));
+    } */
+  </script>
+</body>
+</html>

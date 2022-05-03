@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>4、希尔排序.html</title>
+</head>
+<body>
+  <script>
+    /* 
+      1.	选取增量值；（选取增量是关键，选取什么样的增量最好，目前还是个数学难题）
+          我们在这里选取increment = increment/3+1或者increment = increment/2。（increment = 数组的长度）
+      2.	目的：增量值的两边的元素，两个两个对比，最终把相对比较小的数排在前面，相对比较大的数排在后面，把一组数据排成基本有序。
+     */
+    var arr = [55,26,33,80,70,90,6,30,40,20];
+    // 理解起来比下面那个容易
+    function shallSort(arr){
+      var increment = arr.length;
+      var temp;
+      do{
+        increment = Math.floor(increment / 3) + 1;
+        for(var i = increment; i < arr.length; i ++){
+          if(arr[i] < arr[i - increment]){
+            temp = arr[i];
+            for(var j = i - increment; j >= 0 && arr[j] > temp; j-=increment){
+              arr[j + increment] = arr[j];
+            }
+            arr[j + increment] = temp;
+          }
+        }
+      }while(increment > 1);
+      return arr;
+    }
+
+// 公众号：五分钟学算法
+    function shellSort(arr){
+      var len = arr.length,
+          temp,
+          gap = 1;
+      while(gap < len/3){
+        gap = gap*3 + 1;
+      }
+      for(gap; gap > 0; gap = Math.floor(gap/3)){
+        for(var i = gap; i < len; i++){
+          temp = arr[i];
+          for(var j = i - gap; j >= 0 && arr[j] > temp; j -= gap){
+            arr[j + gap] = arr[j];
+          }
+          arr[j + gap] = temp;
+        }
+      }
+      return arr;
+    }
+  </script>
+</body>
+</html>

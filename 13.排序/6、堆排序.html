@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>6、堆排序.html</title>
+</head>
+<body>
+  <script>
+    var arr = [55,26,33,80,70,90,6,30,40,20];
+
+    var len;
+    // 构建大顶堆
+    function buildMaxHeap (arr) {
+      len = arr.length;
+      for (var i = Math.floor(len / 2); i >= 0; i--) {
+        heapify(arr, i);
+      }
+    }
+    function heapify(arr, i) {
+      var left = 2 * i + 1,
+          right = 2 * i + 2,
+          largest = i;
+
+          if (left < len && arr[left] > arr[largest]) {
+            largest = left;
+          }
+
+          if (right < len && arr[right] > arr[largest]) {
+            largest = right;
+          }
+          if (largest != i) {
+            swap(arr, i, largest);
+            heapify(arr, largest);
+          }
+    }
+    function swap(arr, i, j) {
+      var temp = arr[i];
+      arr[i] = arr[j];
+      arr[j] = temp;
+    }
+    function heapSort(arr) {
+      buildMaxHeap(arr);
+      for(var i = arr.length - 1; i > 0; i--) {
+        swap(arr, 0, i);
+        len --;
+        heapify(arr, 0);
+      }
+      return arr;
+    }
+
+    console.log(heapSort(arr));
+
+
+
+
+
+  </script>
+</body>
+</html>

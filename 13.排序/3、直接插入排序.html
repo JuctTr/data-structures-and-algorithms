@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3、直接插入排序</title>
+</head>
+<body>
+    <script>
+        var arr = [5,3,4,6,2];
+        /* 
+            1、把当前元素的后一个设置为哨兵，当前元素current与哨兵guard比较，若大于哨兵，就把当前的值赋给哨兵所在索引的值。
+            2、交换后在与前面的元素比较如果小于前面元素，再次交换
+            3、后面再把哨兵赋给当前元素的值
+            4、若小于哨兵，跳出while循环，哨兵自己赋给自己，原序列没变化，进行下一个循环
+         */
+        function insertionSort(arr){
+            var len = arr.length;
+            var current,guard;
+            for(var i = 1; i < len; i++){
+                current = i - 1; 
+                guard = arr[i]; // 哨兵的作用
+                while(current >= 0 && arr[current] > guard){
+                    arr[current + 1] = arr[current];
+                    current --; // 上面交换后，也就是哨兵已经和当前元素current交换位置了，但是哨兵必须再与前面的元素比较，如果小于前面元素，再次交换
+                }
+                arr[current + 1] = guard;
+            }
+            return arr;
+        }
+        console.log(insertionSort(arr));
+    </script>
+</body>
+</html>

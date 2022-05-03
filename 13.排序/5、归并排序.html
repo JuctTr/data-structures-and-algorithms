@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>5、归并排序.html</title>
+</head>
+<body>
+  <script>
+    /* 
+      把一组数据平均逐次分割，直到剩下每一组只有一个或零个，在按照升序的形式逐次合并
+     */
+    var arr = [55,26,33,80,70,90,6,30,40,20];
+    function mergeSort(arr){
+      var len = arr.length;
+      if(len < 2) {
+        return arr;
+      }
+      var middle = Math.floor(len / 2),
+          left = arr.slice(0, middle);
+          right = arr.slice(middle);
+        return merge(mergeSort(left), mergeSort(right));
+        // (mergeSort(left), mergeSort(right))这个采用递归的方式，执行到剩下每一组只有一个或零个
+    }
+    function merge(left, right){
+      // 把每一组只有一个或零个开始合并
+      var result = [];
+      // 把小的先push进数组里面
+      while(left.length && right.length){
+        if(left[0] <= right[0]){
+          result.push(left.shift());
+        } else{
+          result.push(right.shift());
+        }
+      }
+      // 小的push到数组里面了，剩下一个大的只要不为空数组，就push进去
+      while(left.length){
+        result.push(left.shift());
+      }
+      while(right.length){
+        result.push(right.shift());
+      }
+      return result;
+    }
+  </script>
+</body>
+</html>
