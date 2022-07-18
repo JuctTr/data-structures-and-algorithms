@@ -5,11 +5,11 @@ class StackBasedArray {
     }
 
     push (element) {
-        this.items.push(element)
+        return this.items.push(element)
     }
 
     pop () {
-        this.items.pop()
+        return this.items.pop()
     }
 
     peek () {
