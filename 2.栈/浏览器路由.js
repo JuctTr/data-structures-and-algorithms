@@ -35,7 +35,7 @@ class Router {
         // 比较当前路由的状态，得出是后退、前进、刷新的状态。
         for (var i = 0; i < len; i++) {
             var h = this.history[i];
-            if (h.hash === currentHash.path && h.key === currentHash.query.key) {
+            if(h.hash === currentHash.path && h.key === currentHash.query.key){
                 index = i
                 if (i === len - 1) {
                     refresh = true

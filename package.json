@@ -1,28 +1,28 @@
 {
-  "name": "data-structuress-and-algorithms",
-  "version": "1.0.0",
-  "description": "JavaScript的数据结构与算法",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JuctTr/data-structuress-and-algorithms.git"
-  },
-  "keywords": [
-    "data-structures-and-algorithms"
-  ],
-  "author": "juctTr",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JuctTr/data-structuress-and-algorithms/issues"
-  },
-  "homepage": "https://github.com/JuctTr/data-structuress-and-algorithms#readme",
-  "devDependencies": {
-    "eslint": "^8.12.0",
-    "eslint-config-o2team-wx": "^1.0.3",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-html": "^6.2.0"
-  }
+    "name": "data-structuress-and-algorithms",
+    "version": "1.0.0",
+    "description": "JavaScript的数据结构与算法",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/JuctTr/data-structuress-and-algorithms.git"
+    },
+    "keywords": [
+        "data-structures-and-algorithms"
+    ],
+    "author": "juctTr",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/JuctTr/data-structuress-and-algorithms/issues"
+    },
+    "homepage": "https://github.com/JuctTr/data-structuress-and-algorithms#readme",
+    "devDependencies": {
+        "eslint": "^8.12.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "prettier": "^2.7.1"
+    }
 }

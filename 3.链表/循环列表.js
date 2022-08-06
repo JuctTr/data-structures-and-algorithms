@@ -92,7 +92,6 @@ class DoublyLinkedList {
 }
 
 const nodelist = new DoublyLinkedList();
-
 nodelist.append(1);
 nodelist.append(12);
 nodelist.append(123);
