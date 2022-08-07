@@ -1,4 +1,4 @@
-# JavaScript 的数据结构与算法（data-structuress-and-algorithms）
+# JavaScript 的数据结构与算法
 
 本仓库参考[Learning JavaScript Data Structures and Algorithms - Third Edition](https://github.com/PacktPublishing/Learning-JavaScript-Data-Structures-and-Algorithms-Third-Edition)
 ，学习数据结构与算法的一些笔记 和 demo 代码
@@ -72,6 +72,7 @@ const obj = {
 最终`匿名函数后面的空格`这个问题被修复了，Pull Request：https://github.com/prettier/prettier/pull/3903
 而函数声明后面的依然保留。
 
-https://github.com/prettier/prettier-eslint也提到，prettier是一个更强大的自动格式化程序。prettier的好处之一是它是多么的固执己见
+https://github.com/prettier/prettier-eslint
+中也提到，prettier是一个更强大的自动格式化程序。prettier的好处之一是它是多么的固执己见
 
-当然也有开发者自己实现了一些 options
+当然也有开发者自己实现了一些 options，具体见issues。
