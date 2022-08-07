@@ -4,9 +4,21 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
-        <!-- <script src="./Stack.js" type="module"></script> -->
+        <!-- <script src="./Stack.js" type="module"></script>
         <script src="./minStatck.js" type="module"></script>
-        <script src="./stackToQueue.js" type="module"></script>
+        <script src="./stackToQueue.js" type="module"></script> -->
+        <script type="module">
+            import { StackBasedArray } from './Stack.js';
+            const stackBasedArray = new StackBasedArray();
+            stackBasedArray.push(1);
+            stackBasedArray.push(2);
+            console.log(
+                stackBasedArray,
+                stackBasedArray.size(),
+                stackBasedArray.peek(),
+                stackBasedArray.toString()
+            );
+        </script>
     </head>
     <body></body>
 </html>
