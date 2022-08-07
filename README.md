@@ -1,8 +1,17 @@
 # JavaScript 的数据结构与算法（data-structuress-and-algorithms）
 
-# Q&A
+本仓库参考[Learning JavaScript Data Structures and Algorithms - Third Edition](https://github.com/PacktPublishing/Learning-JavaScript-Data-Structures-and-Algorithms-Third-Edition)
+，学习数据结构与算法的一些笔记 和 demo 代码
 
-## Eslint 结合 Prettier 来格式化代码程序
+- 本人觉得源仓库的代码有些语义化不太友好，记笔记期间对一些变量做了一些修改和调整
+
+## 参考
+
+[Learning JavaScript Data Structures and Algorithms - Third Edition](https://github.com/PacktPublishing/Learning-JavaScript-Data-Structures-and-Algorithms-Third-Edition)
+
+## Q&A
+
+### Eslint 结合 Prettier 来格式化代码程序
 
 在使用 Eslint 结合 Prettier 来格式化代码程序时，遇到一个问题，就是函数关键字后面的空格，Prettier 是不让添加的，当你在 vscode 编辑器的 setting.json 中设置 ` "editor.formatOnSave": true,`时，
 每当保存，就会把空格去掉，如下：
@@ -56,9 +65,9 @@ const obj = {
 
 这个空格是否保留，官方 GitHub 上存在很大争议
 
-函数声明后面的空格：https://github.com/prettier/prettier/issues/3845
+-   函数声明后面的空格：https://github.com/prettier/prettier/issues/3845
 
-匿名函数后面的空格：https://github.com/prettier/prettier/issues/3847
+-   匿名函数关键字后面的空格：https://github.com/prettier/prettier/issues/3847
 
 最终`匿名函数后面的空格`这个问题被修复了，Pull Request：https://github.com/prettier/prettier/pull/3903
 而函数声明后面的依然保留。

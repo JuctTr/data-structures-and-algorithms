@@ -1,16 +1,17 @@
-class Node { // Node类表示要加入链表的项
-    constructor (element) {
-        this.element = element; // 要添加到列表的值
-        this.next = null; // 指向下一个节点项的指针
-    }
-}
-class LinkedList {
-    constructor (element) {
-        this.length = 0
+import { Node } from './Node.js';
+
+/**
+ * @description 单链表
+ */
+export default class LinkedList {
+    constructor(element) {
+        this.length = 0;
         this.head = null;
         if (element) {
             this.head = new Node(element);
             this.length = 1;
+        } else {
+            console.warn('初始化链表时头节点为空！');
         }
         // this.append = append; // 向链表尾部添加元素
         // this.insert = insert; // 向链表特定位置插入元素
@@ -26,10 +27,11 @@ class LinkedList {
      * 1、向链表尾部添加元素
      * @param {*} element
      */
-    append (element) {
+    push(element) {
         const node = new Node(element);
         let current;
-        if (this.head == null) { // 空链表
+        if (this.head == null) {
+            // 空链表
             this.head = node;
         } else {
             current = this.head; // 把第一个元素（节点）赋给current变量
@@ -43,7 +45,7 @@ class LinkedList {
             current.next = node; // 将新节点赋给最后一个元素节点的next指针，建立连接
         }
         this.length++; // 更新链表长度
-        console.log(this.head)
+        console.log(this.head);
     }
     /**
      * 2、向链表特定位置插入元素
@@ -51,15 +53,17 @@ class LinkedList {
      * @param {*} element
      * @returns
      */
-    insert (position, element) {
-        if (position < 0 || position > this.length) { // 检查越界值
+    insert(position, element) {
+        if (position < 0 || position > this.length) {
+            // 检查越界值
             return false;
         }
         const node = new Node(element);
         let current = this.head;
         let index = 0;
         let previous;
-        if (position === 0) { // 在第一个位置添加
+        if (position === 0) {
+            // 在第一个位置添加
             node.next = current;
             this.head = node;
         } else {
@@ -71,7 +75,7 @@ class LinkedList {
             node.next = current;
         }
         this.length++;
-        console.log(this.head)
+        console.log(this.head);
         return true;
     }
 
@@ -80,12 +84,13 @@ class LinkedList {
      * @param {*} position
      * @returns
      */
-    removeAt (position) {
+    removeAt(position) {
         if (position < 0 || position > this.length) {
             return null;
         }
         let current = this.head;
-        let previous; let index = 0;
+        let previous;
+        let index = 0;
         if (position === 0) {
             this.head = current.next;
         } else {
@@ -103,12 +108,11 @@ class LinkedList {
      * @param {*} position
      * @returns
      */
-    getElementAt (position) {
-        // eslint-disable-next-line no-undefined
-        if (position < 0 | position > this.length) return undefined;
+    getElementAt(position) {
+        if ((position < 0) | (position > this.length)) return undefined;
         let node = this.head;
         for (let i = 0; i < position && node != null; i++) {
-            node = node.next
+            node = node.next;
         }
         return node;
     }
@@ -116,7 +120,7 @@ class LinkedList {
      * 4、toString方法，会把LinkedList对象转换成一个字符串
      * @returns
      */
-    toString () {
+    toString() {
         let current = this.head;
         let str = '';
         while (current) {
@@ -130,7 +134,7 @@ class LinkedList {
      * @param {*} element
      * @returns
      */
-    indexOf (element) {
+    indexOf(element) {
         let current = this.head;
         let index = 0;
         while (current) {
@@ -148,7 +152,7 @@ class LinkedList {
      * @param {*} element
      * @returns
      */
-    remove (element) {
+    remove(element) {
         const index = this.indexOf(element);
         return this.removeAt(index);
     }
@@ -157,14 +161,14 @@ class LinkedList {
      * 7、isEmpty方法（链表的length是内部控制的，因为LinkedList是从头构建的）
      * @returns
      */
-    isEmpty () {
+    isEmpty() {
         return this.length === 0;
     }
     /**
      * 8、size方法
      * @returns
      */
-    size () {
+    size() {
         return this.length;
     }
     /**
@@ -173,13 +177,7 @@ class LinkedList {
      * 但是，如果我们需要在类的外部循环访问列表，就需要提供一种获取类的第一个元素的方法。
      * @returns
      */
-    getHead () {
+    getHead() {
         return this.head;
     }
 }
-const nodelist = new LinkedList()
-nodelist.append(1)
-nodelist.append(12)
-nodelist.append(123)
-nodelist.append(1234)
-console.log(nodelist.getElementAt(2))

@@ -6,6 +6,6 @@ set -e
 git status
 
 git add -A
-git commit -m 'feat(🤡): 调整prettier和eslint之间的问题'
+git commit -m 'feat(🤡): 完善循环列表，调整代码的模块化引用'
 
 git push

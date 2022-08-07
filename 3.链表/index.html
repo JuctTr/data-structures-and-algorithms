@@ -1,0 +1,44 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>3.链表</title>
+    </head>
+    <!-- <script src="./单向链表.js" type="module"></script>
+    <script src="./双向链表.js" type="module"></script>
+    <script src="./循环列表.js" type="module"></script> -->
+    <!-- <script type="module">
+        import LinkedList from './单向链表.js';
+        const nodelist = new LinkedList();
+        nodelist.push(1);
+        nodelist.push(12);
+        nodelist.push(123);
+        nodelist.push(1234);
+        console.log(nodelist.getElementAt(2));
+    </script> -->
+    <!-- <script type="module">
+        import DoublyLinkedList from './双向链表.js';
+        const nodelist = new DoublyLinkedList();
+        nodelist.push(1);
+        nodelist.push(12);
+        nodelist.push(123);
+        nodelist.push(1234);
+        console.log(nodelist.getElementAt(2));
+    </script> -->
+    <script type="module">
+        import CircularLinkedList from './循环列表.js';
+        import { Node } from './Node.js';
+        const nodelist = new CircularLinkedList();
+        nodelist.push(1);
+        nodelist.push(23);
+        nodelist.push(456);
+        nodelist.push(78910);
+        nodelist.insert('插入到头节点', 0);
+        nodelist.insert('插入位置1', 1);
+        console.log(nodelist.removeAt(0))
+        console.log(nodelist);
+        console.log(nodelist.remove('插入位置1'))
+    </script>
+    <body></body>
+</html>
