@@ -6,7 +6,8 @@
 
 ## 参考
 
-[Learning JavaScript Data Structures and Algorithms - Third Edition](https://github.com/PacktPublishing/Learning-JavaScript-Data-Structures-and-Algorithms-Third-Edition)
+-   [Learning JavaScript Data Structures and Algorithms - Third Edition](https://github.com/PacktPublishing/Learning-JavaScript-Data-Structures-and-Algorithms-Third-Edition)
+-   《大话数据结构》（溢彩加强版）程杰 • 著
 
 ## Q&A
 
