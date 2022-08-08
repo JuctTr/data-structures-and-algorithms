@@ -1,9 +1,8 @@
 # JavaScript 的数据结构与算法
 
-本仓库参考[Learning JavaScript Data Structures and Algorithms - Third Edition](https://github.com/PacktPublishing/Learning-JavaScript-Data-Structures-and-Algorithms-Third-Edition)
-，学习数据结构与算法的一些笔记 和 demo 代码
+本仓库参考[Learning JavaScript Data Structures and Algorithms - Third Edition](https://github.com/PacktPublishing/Learning-JavaScript-Data-Structures-and-Algorithms-Third-Edition)以及看 **《大话数据结构》（溢彩加强版）** 的一些笔记 和 demo 代码
 
-- 本人觉得源仓库的代码有些语义化不太友好，记笔记期间对一些变量做了一些修改和调整
+-   本人觉得源仓库的代码有些语义化不太友好，记笔记期间对一些变量做了一些修改和调整
 
 ## 参考
 
@@ -73,6 +72,6 @@ const obj = {
 而函数声明后面的依然保留。
 
 https://github.com/prettier/prettier-eslint
-中也提到，prettier是一个更强大的自动格式化程序。prettier的好处之一是它是多么的固执己见
+中也提到，prettier 是一个更强大的自动格式化程序。prettier 的好处之一是它是多么的固执己见
 
-当然也有开发者自己实现了一些 options，具体见issues。
+当然也有开发者自己实现了一些 options，具体见 issues。
