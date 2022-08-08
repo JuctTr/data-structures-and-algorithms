@@ -16,7 +16,7 @@
             queue.dequeue();
             console.log(queue, queue.size(), queue.peek(), queue.toString());
         </script> -->
-        <script type="module">
+        <!-- <script type="module">
             import DoubleEndedQueue from './DoubleEndedQueue.js';
             const deque = new DoubleEndedQueue();
             deque.addFront(1);
@@ -29,6 +29,16 @@
                 deque.peekFront(),
                 deque.toString()
             );
+        </script> -->
+        <script type="module">
+            import hotPotato from './hotPotato.js';
+            const names = ['John', 'Jack', 'Camila', 'Ingrid', 'Carl'];
+            const result = hotPotato(names, 7);
+            result.eliminated.forEach(name => {
+                console.log(`${name}在击鼓传花游戏中被淘汰。`);
+            });
+            console.log(`胜利者: ${result.winner}`);
+            console.log(result);
         </script>
     </head>
     <body></body>
