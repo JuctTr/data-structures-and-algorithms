@@ -1,0 +1,35 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>4.队列</title>
+        <!-- <script type="module">
+            import Queue from './Queue.js';
+            const queue = new Queue();
+            queue.enqueue(1);
+            queue.enqueue(2);
+            queue.enqueue(3);
+            queue.enqueue(4);
+            console.log(queue, queue.size(), queue.peek(), queue.toString());
+            queue.dequeue();
+            queue.dequeue();
+            console.log(queue, queue.size(), queue.peek(), queue.toString());
+        </script> -->
+        <script type="module">
+            import DoubleEndedQueue from './DoubleEndedQueue.js';
+            const deque = new DoubleEndedQueue();
+            deque.addFront(1);
+            deque.addFront(2);
+            deque.addFront(3);
+            deque.addFront(4);
+            console.log(
+                deque,
+                deque.size(),
+                deque.peekFront(),
+                deque.toString()
+            );
+        </script>
+    </head>
+    <body></body>
+</html>
