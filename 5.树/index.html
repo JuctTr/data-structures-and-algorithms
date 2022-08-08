@@ -1,0 +1,43 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>10.树</title>
+    </head>
+    <body>
+        <!-- <script src="./二分查找树.js" type="module"></script> -->
+        <!-- <script src="./arrayToTree.js" type="module"></script> -->
+        <script type="module">
+            import BinarySearchTree from './二分查找树.js';
+            const binarySearchTree = new BinarySearchTree();
+            const arr = [11, 7, 5, 3, 6, 9, 8, 10, 15, 13, 12, 14, 20, 18, 25];
+            console.log('输入 => ', arr);
+            for (let i = 0; i < arr.length; i++) {
+                binarySearchTree.insert(arr[i]);
+            }
+
+            // console.log('先序遍历：');
+            // var arr1 = [];
+            // binarySearchTree.preOrderTraverse(function (value) {
+            //     // console.log(value);
+            //     arr1.push(value);
+            // });
+            // console.log(arr1);
+            // console.log('中序遍历：');
+            // var arr2 = [];
+            // binarySearchTree.inOrderTraverse(function (value) {
+            //     // console.log(value);
+            //     arr2.push(value);
+            // });
+            // console.log(arr2);
+            // console.log('后序遍历：');
+            // var arr3 = [];
+            // binarySearchTree.postOrderTraverse(function (value) {
+            //     // console.log(value);
+            //     arr3.push(value);
+            // });
+            // console.log(arr3);
+        </script>
+    </body>
+</html>
