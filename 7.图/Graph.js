@@ -1,7 +1,7 @@
 // import Dictionary from './dictionary'; // 可以使用ECMAScript 2015 新增了 Map 类
 
 /**
- * @description 这个例子就是邻接表的应用
+ * @description
  * 我们可以用列表(数组)、链表，甚至是 散列表 或是 字典 （Map）来表示相邻顶点列表（边或弧）
  * 把这种数组与链表相结合的存储方法称为邻接表(Adjacency List)
  */
