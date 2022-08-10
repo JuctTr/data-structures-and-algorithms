@@ -1,13 +1,22 @@
 // import Dictionary from './dictionary'; // 可以使用ECMAScript 2015 新增了 Map 类
 
 /**
- * @description 把这种数组与链表相结合的存储方法称为邻接表(Adjacency List)
+ * @description 这个例子就是邻接表的应用
+ * 我们可以用列表(数组)、链表，甚至是 散列表 或是 字典 （Map）来表示相邻顶点列表（边或弧）
+ * 把这种数组与链表相结合的存储方法称为邻接表(Adjacency List)
  */
 export default class Graph {
-    constructor(isDirected = false) {
+    constructor(verticeList, isDirected = false) {
         this.isDirected = isDirected;
         this.vertices = []; // 一维数组来存储图的顶点
-        this.adjList = new Map(); // 邻接表
+        this.adjList = new Map(); // 使用字典来表示邻接表
+        this.init(verticeList);
+    }
+    init(verticeList) {
+        const len = verticeList.length;
+        for (let i = 0; i < len; i++) {
+            this.addVertex(verticeList[i]);
+        }
     }
     /**
      * @description 增加顶点
