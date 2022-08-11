@@ -49,8 +49,10 @@
 
             console.log(graph.toString(), graph.getVertices(), graph.getAdjList());
         </script> -->
-        <!-- <script type="module">
+        <script type="module">
             import AdjacencyList from './邻接表.js';
+            import TopologicalSort from './拓扑排序.js';
+
             const myVertices = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'];
             const graph = new AdjacencyList(myVertices);
 
@@ -67,7 +69,9 @@
 
             console.log('********* printing graph ***********');
             console.log(graph.toString(), graph.getVertices(), graph.getAdjList());
-        </script> -->
+
+            const demo = TopologicalSort(graph);
+        </script>
         <!-- <script type="module">
             import Graph from './Graph.js';
             import { depthFirstSearch } from './depth-first-search.js';
@@ -94,7 +98,7 @@
                 })
             );
         </script> -->
-        <script type="module">
+        <!-- <script type="module">
             import Graph from './Graph.js';
             import { breadthFirstSearch } from './breadth-first-search.js';
 
@@ -119,6 +123,6 @@
             const printVertex = value => console.log('Visited vertex: ' + value);
 
             breadthFirstSearch(graph, myVertices[0], printVertex);
-        </script>
+        </script> -->
     </body>
 </html>
