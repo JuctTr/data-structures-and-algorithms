@@ -3,6 +3,7 @@
 本仓库参考[Learning JavaScript Data Structures and Algorithms - Third Edition](https://github.com/PacktPublishing/Learning-JavaScript-Data-Structures-and-Algorithms-Third-Edition)以及看 **《大话数据结构》（溢彩加强版）** 的一些笔记 和 demo 代码
 
 -   本人觉得源仓库的代码有些语义化不太友好，记笔记期间对一些变量做了一些修改和调整
+-   基本概念和定义建议看《大话数据结构》，《学习 javascript 数据结构与算法》对于一些算法的讲解是直接上代码，太过简单粗暴
 
 ## 参考
 
