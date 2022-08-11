@@ -70,8 +70,8 @@ const obj = {
 
 -   匿名函数关键字后面的空格：https://github.com/prettier/prettier/issues/3847
 
-最终`匿名函数后面的空格`这个问题被修复了，Pull Request：https://github.com/prettier/prettier/pull/3903
-而函数声明后面的依然保留。
+最终`匿名函数后面留空格`这个提议被纳入了，Pull Request：https://github.com/prettier/prettier/pull/3903
+而函数声明后面留空格的提议不被采纳。
 
 https://github.com/prettier/prettier-eslint
 中也提到，prettier 是一个更强大的自动格式化程序。prettier 的好处之一是它是多么的固执己见
