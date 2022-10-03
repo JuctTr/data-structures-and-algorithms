@@ -7,14 +7,14 @@ import { StackBasedArray } from './Stack.js';
 class ReversePolishNotation extends StackBasedArray {
     constructor(arr) {
         super();
-        console.log(arr, this);
+        // console.log(arr, this);
         if (!arr || arr.length <= 0) {
             return console.error('the param is errors');
         }
         arr.forEach(item => {
-            if (typeof item === 'number') {
-                this.push(item);
-            } else if (item === '-') {
+            if (/\d+/.test(item)) {
+                this.push(Number(item));
+            } else if (item === '-' || item === '—') {
                 // 减数
                 const subtraction = this.pop();
                 // 被减数
@@ -24,11 +24,11 @@ class ReversePolishNotation extends StackBasedArray {
                 const addend = this.pop();
                 const summand = this.pop();
                 this.push(summand + addend);
-            } else if (item === '*') {
+            } else if (item === '*' || item === 'x' || item === '×') {
                 const leftMultiplier = this.pop();
                 const rightMultiplier = this.pop();
                 this.push(leftMultiplier * rightMultiplier);
-            } else if (item === '/') {
+            } else if (item === '/' || item === '÷') {
                 // 除数
                 const divisor = this.pop();
                 // 被除数

@@ -19,15 +19,43 @@
                 stackBasedArray.toString()
             );
         </script> -->
-        <!-- <script type="module">
-            import ReversePolishNotation from './reversePolishNotation.js';
-            const result = new ReversePolishNotation([9, 3, 1, '-', 3, '*', '+', 10, 2, '/', '+']);
-            console.log(result.outputResult())
-        </script> -->
         <script type="module">
-            import ReversePolishNotation from './中缀表达式转后缀表达式.js';
-            const result = new ReversePolishNotation([9, '+', '(', 3, '-', 1, ')', '*', 3, '+', 10, '/', 2]);
-            console.log(result)
+            import ReversePolishNotation1 from './中缀表达式转后缀表达式.js';
+            import ReversePolishNotation2 from './reversePolishNotation.js';
+
+            // const result = new ReversePolishNotation1('9+(3—1)×3+10÷2');
+            const result = new ReversePolishNotation1('3+2*(1+2*(4/(8-6)+7))');
+            // const result = new ReversePolishNotation1([
+            //     9,
+            //     '+',
+            //     '(',
+            //     3,
+            //     '-',
+            //     1,
+            //     ')',
+            //     '*',
+            //     3,
+            //     '+',
+            //     10,
+            //     '/',
+            //     2,
+            // ]);
+            console.log(result);
+            // const result1 = new ReversePolishNotation2([
+            //     9,
+            //     3,
+            //     1,
+            //     '-',
+            //     3,
+            //     '*',
+            //     '+',
+            //     10,
+            //     2,
+            //     '/',
+            //     '+',
+            // ]);
+            const result1 = new ReversePolishNotation2(result);
+            console.log(result1.outputResult());
         </script>
     </head>
     <body></body>
